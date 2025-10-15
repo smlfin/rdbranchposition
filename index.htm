@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secured Sheet Data Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js"></script>
+    
+</head>
+<body>
+    <div class="container">
+        <h1>Sheet Data Dashboard</h1>
+        
+        <div id="message" class="info">Loading...</div>
+
+        <div id="login-container">
+            <h2>Branch Login</h2>
+            <div class="form-group">
+                <label for="branch-select">Select Branch:</label>
+                <select id="branch-select"></select>
+            </div>
+            <div class="form-group">
+                <label for="branch-password">Password:</label>
+                <input type="password" id="branch-password" placeholder="Enter Branch Password">
+            </div>
+            <button id="login-button">Login</button>
+        </div>
+
+        <div id="data-display" class="hidden">
+            
+            <div id="latest-update-date"></div>
+            
+            <div class="controls">
+                <div>
+                    <span id="current-branch-name" class="branch-tag"></span>
+                    <button id="logout-button">Logout</button>
+                </div>
+
+                <div class="form-group" style="margin-bottom: 0;">
+                    <label for="month-filter">Filter by Month:</label>
+                    <select id="month-filter"></select>
+                </div>
+            </div>
+
+            <div id="dashboard-container" class="dashboard-view">
+                
+                <h2>Dashboard Summary</h2>
+                <div id="total-summary" class="total-summary-section">...</div>
+                
+                <h3>Agent Performance Summary (Click for Details)</h3>
+                <div id="agent-summary" class="agent-summary-section">...</div>
+                
+                <div class="chart-container" style="margin-top: 40px;">
+                    <h3>Staff Performance Chart (Amount: Max to Low)</h3>
+                    <canvas id="agentBarChart"></canvas>
+                </div>
+
+            </div>
+            
+            <div id="detailed-view-container" class="hidden">
+                <button id="back-to-dashboard-button">← Back to Dashboard</button>
+                <h3 id="table-title">Detailed Transactions</h3>
+                <table id="data-table">
+                    <thead>
+                        <tr>
+                            <th>RD NO</th><th>MOBILE</th><th>DATE</th><th>AMT</th><th>SHARE NAME</th><th>AGENT</th><th>COMPANY</th><th>BRANCH</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        </tbody>
+                </table>
+            </div>
+
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
