@@ -23,7 +23,7 @@ const BRANCH_PASSWORDS = {
     "MUVATTUPUZHA": "Muva@74",
     "NENMARA": "Nenmara#19",
     "NEDUMKANDOM": "Nedum72*",
-    "PARAVUR": "Parav@50",
+    "PARAVUR": "Parv!50",
     "PATHANAMTHITTA": "Pathan#10",
     "PERUMBAVOOR": "Perum43*",
     "THIRUVALLA": "Thiru@05",
